@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true" class="login-content">
+
+  <div class="login-container">
+
+    <ion-card>
+
+      <ion-card-header>
+        <ion-card-title>Bienvenidos Belmemdoc</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" (click)="login()">Iniciar sesión</ion-button>
+        <ion-button expand="full" (click)="addUser()">¡Registrate!</ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+</ion-content>
