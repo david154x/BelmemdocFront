@@ -20,11 +20,19 @@ const routes: Routes = [
         loadChildren: () => import('./pages/producto/producto.module').then(m => m.ProductoPageModule)
       },
       {
+        path: 'catalogo-producto',
+        loadChildren: () => import('./pages/catalogo-productos/catalogo-productos.module').then( m => m.CatalogoProductosPageModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
-      }
+      },
     ]
+  },
+  {
+    path: 'catalogo-productos',
+    loadChildren: () => import('./pages/catalogo-productos/catalogo-productos.module').then( m => m.CatalogoProductosPageModule)
   }
 ];
 

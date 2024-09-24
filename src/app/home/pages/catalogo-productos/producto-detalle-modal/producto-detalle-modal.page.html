@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrar()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ producto.nombreProducto }}</ion-card-title>
+      <ion-card-subtitle>{{ producto.valorProducto | currency }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="producto.ubicacionFoto"></ion-img>
+      <p>{{ producto.descripcionProducto }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

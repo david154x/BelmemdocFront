@@ -8,6 +8,6 @@ export interface ProductoCreateDTO {
 
     valorProducto: number;
 
-    ubicacionFoto: Blob | null;
+    ubicacionFoto: string;
 
 }

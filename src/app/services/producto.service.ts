@@ -13,8 +13,8 @@ export class ProductoService {
 
   constructor(private http: HttpClient) {}
 
-  getProductos(): Observable<ProductoDTO[]> {
-    return this.http.get<ProductoDTO[]>(environment.apiUrl+'/producto');
+  getProductos(): Observable<any[]> {
+    return this.http.get<any[]>(environment.apiUrl+'/producto');
   }
 
   addProducto(productoCreateDTO: ProductoCreateDTO): Observable<any> {

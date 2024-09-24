@@ -19,7 +19,7 @@ export class AddProductoModalPage implements OnInit {
     nombreProducto : '',
     descripcionProducto : '',
     valorProducto : 0,
-    ubicacionFoto: null
+    ubicacionFoto: ''
   };
 
   marcas: any[] = []; 
@@ -95,22 +95,15 @@ export class AddProductoModalPage implements OnInit {
 
 async takePicture() {
   const image = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: false,
-      resultType: CameraResultType.Uri,
-      source: CameraSource.Camera
+    quality: 90,
+    allowEditing: false,
+    resultType: CameraResultType.Base64,  // Convertimos directamente a base64
+    source: CameraSource.Camera
   });
 
-  if (image.webPath) {
-      // Convertir la URI en Blob
-      this.productoCreate.ubicacionFoto = await this.convertToBlob(image.webPath);
+  if (image.base64String) {
+    this.productoCreate.ubicacionFoto = image.base64String; // Almacenamos la imagen en base64 en el objeto
   }
-}
-
-async convertToBlob(imageURI: string): Promise<Blob> {
-  const response = await fetch(imageURI);
-  const blob = await response.blob(); // Asegúrate de que esto devuelva un Blob
-  return blob;
 }
 
   dismiss() {

@@ -37,6 +37,16 @@
     </ion-select>
   </ion-item>
 
+  <ion-item>
+    <ion-label>Foto del Producto</ion-label>
+    <ion-button (click)="takePicture()">Tomar Foto</ion-button>
+  </ion-item>
+
+  <!-- Mostrar la imagen tomada -->
+  <ion-item *ngIf="productoCreate.ubicacionFoto">
+    <ion-img [src]="productoCreate.ubicacionFoto"></ion-img>
+  </ion-item>
+
   <ion-footer>
     <ion-button expand="full" (click)="guardarProducto()">Guardar Producto</ion-button>
   </ion-footer>
