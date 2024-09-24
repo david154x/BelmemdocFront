@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DashboardPageRoutingModule } from './dashboard-routing.module';
+import { AddMarcaModalPageRoutingModule } from './add-marca-modal-routing.module';
 
-import { DashboardPage } from './dashboard.page';
+import { AddMarcaModalPage } from './add-marca-modal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    AddMarcaModalPageRoutingModule
   ],
-  declarations: [DashboardPage]
+  declarations: [AddMarcaModalPage]
 })
-export class DashboardPageModule {}
+export class AddMarcaModalPageModule {}

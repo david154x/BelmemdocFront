@@ -1,0 +1,28 @@
+:host {
+    --width: 80%;             /* Ajusta el ancho del modal */
+    --max-height: 400px;     /* Ajusta la altura máxima del modal */
+    --border-radius: 10px;   /* Esquinas redondeadas (opcional) */
+    height: auto;            /* Cambiar a auto para que ajuste a su contenido */
+    overflow-y: auto;        /* Agrega desplazamiento vertical si el contenido es demasiado grande */
+  }
+  
+  ion-header {
+    background-color: #f8f9fa; /* Color de fondo del encabezado */
+  }
+  
+  ion-content {
+    display: flex;
+    flex-direction: column; /* Para organizar los elementos en columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio para evitar el centrado */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    height: auto; /* Cambia la altura a auto */
+  }
+  
+  ion-item {
+    margin-bottom: 15px; /* Espaciado entre los ítems, se puede ajustar según necesidad */
+  }
+  
+  ion-button {
+    margin-top: 10px; /* Espaciado superior para el botón */
+  }
+  

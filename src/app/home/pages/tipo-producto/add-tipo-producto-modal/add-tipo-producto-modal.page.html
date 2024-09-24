@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir Tipo Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Cancelar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre del tipo de producto</ion-label>
+    <ion-input [(ngModel)]="nombreTipoProducto" required></ion-input>
+  </ion-item>
+
+  <ion-footer>
+    <ion-button expand="full" (click)="addTipoProducto()">Guardar Tipo De Producto</ion-button>
+  </ion-footer>
+</ion-content>

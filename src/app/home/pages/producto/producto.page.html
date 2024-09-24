@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button (click)="openAddProductoModal()">
+    <ion-icon slot="start" name="add-outline"></ion-icon>
+    Añadir Producto
+  </ion-button>
+
+  <!-- Tabla de marcas -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"><strong>ID</strong></ion-col>
+      <ion-col size="4"><strong>Nombre Marca</strong></ion-col>
+      <ion-col size="3"><strong>Fecha de Creación</strong></ion-col>
+      <ion-col size="3"><strong>Acciones</strong></ion-col>
+    </ion-row>
+  
+    <ion-row *ngFor="let producto of productos">
+      <ion-col size="2">{{ producto.idProducto }}</ion-col>
+      <ion-col size="4">{{ producto.nombreProducto }}</ion-col>
+      <ion-col size="3">{{ producto.fechaCreacion| date: 'dd/MM/yyyy' }}</ion-col>
+      <ion-col size="3">
+        <!-- Botón para eliminar marca -->
+        <ion-button color="danger" (click)="deleteProducto(producto.idProducto)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cancelar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre del Producto</ion-label>
+    <ion-input [(ngModel)]="productoCreate.nombreProducto" name="nombreProducto" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción del Producto</ion-label>
+    <ion-textarea [(ngModel)]="productoCreate.descripcionProducto" name="descripcionProducto" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Valor del Producto</ion-label>
+    <ion-input type="number" [(ngModel)]="productoCreate.valorProducto" name="valorProducto" step="0.01" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Marca</ion-label>
+    <ion-select [(ngModel)]="productoCreate.idMarca" name="idMarca" required>
+      <ion-select-option *ngFor="let marca of marcas" [value]="marca.idMarca">{{ marca.nombre }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tipo de Producto</ion-label>
+    <ion-select [(ngModel)]="productoCreate.idTipoProducto" name="idTipoProducto" required>
+      <ion-select-option *ngFor="let tipo of tiposProducto" [value]="tipo.idTipoProducto">{{ tipo.nombreTipoProducto }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-footer>
+    <ion-button expand="full" (click)="guardarProducto()">Guardar Producto</ion-button>
+  </ion-footer>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir Marca</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Cancelar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre de la Marca</ion-label>
+    <ion-input [(ngModel)]="nombreMarca" required></ion-input>
+  </ion-item>
+
+  <ion-footer>
+    <ion-button expand="full" (click)="addMarca()">Guardar Marca</ion-button>
+  </ion-footer>
+</ion-content>

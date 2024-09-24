@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
         await toast.present();
 
         setTimeout(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/home']);
         }, 1000);
       },
       error: async (err) => {
